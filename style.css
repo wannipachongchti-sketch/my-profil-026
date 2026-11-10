@@ -1,38 +1,85 @@
 * {
-    box-sizing : border-box;
+    box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: sans-serif;
     background-color: fuchsia;
-    margin: 0%;
-    padding: 30px 16px;
+    margin: 0;
+    padding: 0;
     color: hotpink;
 }
 
-.profile-card {
+/* Header & Navigation */
+.main-header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.main-header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: deeppink;
+}
+
+.main-header .logo span {
+    color: #b12994;
+}
+
+.navbar a {
+    color: deeppink;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #b12994;
+}
+
+/* Main Layout */
+.container {
     max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 0 auto;
+    padding: 20px 16px 40px;
+}
+
+.profile-card, .content-card {
     background: #f1f8f1;
     border-radius: 16px;
-    box-sizing: 0 8px 24 px rgba(15, 39, 71,0.12);
-
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 8px 24px rgba(15, 39, 71, 0.12);
+    line-height: 1.8;
 }
+
+.photo-container {
+    text-align: center;
+}
+
 .photo {
     max-width: 300px;
+    width: 100%;
     border-radius: 50%;
 }
 
-h1 {
+h1, h2 {
     color: deeppink;
     text-align: center;
 }
 
-
-.profile-card {
-    line-height: 1.8;
-}
 .motto {
     margin-top: 24px;
     padding: 16px;
@@ -40,22 +87,74 @@ h1 {
     border-left: 5px solid #2563eb;
     border-radius: 8px;
 }
+
+.motto h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
 button {
     margin-top: 16px;
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
     background: #eceef1;
-    color: bisque;
+    color: deeppink;
     font-size: 16px;
-    cursor:pointer;
-}
-button:hover {
-    background: #b12994;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
-#message {
+button:hover {
+    background: #b12994;
+    color: white;
+}
+
+#greetingMessage {
     color: #8c2a2a;
     font-weight: bold;
-    
+}
+
+/* Skills & Projects Details */
+.skills-list {
+    color: #333;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-item {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid deeppink;
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #b12994;
+}
+
+.project-item p {
+    color: #444;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.main-footer {
+    background: #ffffff;
+    text-align: center;
+    padding: 16px;
+    color: deeppink;
+    font-weight: bold;
+    margin-top: 40px;
 }

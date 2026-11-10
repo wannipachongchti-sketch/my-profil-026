@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html lang="th">
-<html>
-    <meta charset="UTF/-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>My profile</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profile - วรรณนิภา จงจิตร</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-</html>
+</head>
 <body>
-    <main class="profile-card">
-        <center><img class="photo" id="photo" src="Photo/S__27508745.jpg"</center>
-       <h1>My profile</h1>
-       <p>ชื่อ-นามสกุล: <span id="fullamne">วรรณนิภา จงจิตร</span></p>
-       <p>ชื่อเล่น: <span id="nickname">แก้ม</span></p>
-       <p>รหัสประจำตัว: <span id="studentID">68219010026</span></p>
 
+    <!-- Header & Navigation Bar -->
+    <header class="main-header">
+        <div class="logo">Kam's <span>Profile</span></div>
+        <nav class="navbar">
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
 
+    <main class="container">
+        <!-- About Me Section -->
+        <section id="about" class="profile-card">
+            <div class="photo-container">
+                <img class="photo" id="photo" src="Photo/S__27508745.jpg" alt="Profile Photo">
+            </div>
+            <h1>My profile</h1>
+            <p>ชื่อ-นามสกุล: <span id="fullname">วรรณนิภา จงจิตร</span></p>
+            <p>ชื่อเล่น: <span id="nickname">แก้ม</span></p>
+            <p>รหัสประจำตัว: <span id="studentID">68219010026</span></p>
 
-    
-    <div class="motto">
-        <h2> คติประจำใจ </h2>
-        <p id="motto">อย่าจ้องตาเดี๋ยวท้อง</p>
-    </div>
+            <div class="motto">
+                <h2>คติประจำใจ</h2>
+                <p id="motto">อย่าจ้องตาเดี๋ยวท้อง</p>
+            </div>
 
-    <button id="greetingBtn">ทักทาย</button>
-    <p id="greetingMessage">ยินดีตอนรับสู่โปรไฟล์ของฉัน</p>
+            <button id="greetingBtn">ทักทาย</button>
+            <p id="greetingMessage">ยินดีตอนรับสู่โปรไฟล์ของฉัน</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-card">
+            <h2>Skills & ทักษะความสามารถ</h2>
+            <ul class="skills-list">
+                <li>HTML5 / CSS3 Layout & Design</li>
+                <li>Basic JavaScript & DOM Manipulation</li>
+                <li>การสื่อสารและการทำงานร่วมกับผู้อื่น</li>
+                <li>การแก้ปัญหาและคิดสร้างสรรค์</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-card">
+            <h2>Projects & ผลงานของฉัน</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <h3>1. Personal Profile Web Page</h3>
+                    <p>เว็บไซต์แนะนำตัวเองแบบ Responsive ตกแต่งด้วย CSS และเพิ่มลูกเล่น Interactive ด้วย JavaScript</p>
+                </div>
+                <div class="project-item">
+                    <h3>2. Mini Web Application</h3>
+                    <p>โปรเจกต์ฝึกเขียนโค้ดและจัดการข้อมูลฝั่ง Frontend</p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 วรรณนิภา จงจิตร (แก้ม)</p>
+    </footer>
+
 </body>
 </html>
